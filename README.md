@@ -1,4 +1,2 @@
 # django_binance_app
-Mozzato company challenge .
-
-About binance module: https://github.com/binance/binance-connector-python
+[Mozzato](https://mozzatto.com.br/) challenge <p>[About binance module](https://github.com/binance/binance-connector-python)
