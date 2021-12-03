@@ -9,7 +9,7 @@ def exe(request):
 
         body = request.data
 
-        data = main.main(param={"value": body['value']})
+        data = main.main(param={"trading pair": body['trading pair']})
 
         return Response(data)
     return
