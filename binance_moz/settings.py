@@ -23,6 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 API_KEY = env.str('API_KEY')
 SECRET_KEY = env.str('SECRET_KEY')
 
+# Logging level
+LOGGING_LEVEL = env.str("LOGGING_LEVEL")
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
