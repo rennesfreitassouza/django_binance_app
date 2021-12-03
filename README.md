@@ -7,4 +7,4 @@ GET http://[EC2_PUBLIC_IP]/binance_app/exec_request
 
 ## Prerequisites
 
-- Modules Django 'django-allauth', 'django-environ', 'django-filter', 'django-rest-framework', 'djangorestframework', 'binance-connector'
+- Modules 'Django' 'django-allauth', 'django-environ', 'django-filter', 'django-rest-framework', 'djangorestframework', 'binance-connector'
