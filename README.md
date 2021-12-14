@@ -12,3 +12,11 @@ GET http://[EC2_PUBLIC_IP]/binance_app/exec_request
 ## Future development
 
 Django + [JavaScript](https://docs.djangoproject.com/en/3.2/internals/contributing/writing-code/javascript/)
+
+from decimal import \*
+
+>a = Decimal('.10')
+>b = Decimal('.39')
+>c = Decimal('.09')
+>
+>x = a + a + a + c - b
