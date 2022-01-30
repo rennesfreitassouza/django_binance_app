@@ -14,12 +14,12 @@ def main(param={"trading pair": None}):
 
         retorno = {"Retorno": client.time(),
                    f"{param['trading pair']} current average price": response}
-
+        
         return retorno
     except ClientError as error:
         str_error = "Found error. status: {}, error code: {},\
             error message: {}".format(
             error.status_code, error.error_code, error.error_message)
         print(str_error)
-
+    
     return {'str_error': str_error}

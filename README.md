@@ -3,13 +3,15 @@
 ## Prerequisites
 
 - [Your own Binance API](https://www.binance.com/en/support/faq/360002502072)
-- Modules 'Django' 'django-allauth', 'django-environ', 'django-filter', 'django-rest-framework', 'djangorestframework', 'binance-connector'
+- Modules 'Django' 'django-allauth', 'django-environ', 'django-filter', 'django-rest-framework', 'djangorestframework', 'binance-connector', 'psycopg2-binary'
 
 ## How to run the django app
 
 - Install Python 3
 - Create a virtual environment
 - Install the required modules
+- Install postgresql
+-
 - Execute these commands:<p>
   `$ python manage.py migrate`<p>
   `$ python manage.py createsuperuser`<p>
