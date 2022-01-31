@@ -18,7 +18,7 @@ def exe(request):
 
         data = main.main(param={"trading pair": body['trading pair']})
 
-        return Response(data={'data':data, 'body': request.data})
+        return Response(data)
     return
 
 
@@ -44,4 +44,4 @@ def home(request):
     #
     t_scheduler.t3()
     #GXStoUSDT = GXStoUSDT.objects
-    return render(request, 't_b_app/home.html')#, {'GXStoUSDT': GXStoUSDT})
+    return render(request, 't_b_app/home.html')  # , {'GXStoUSDT': GXStoUSDT})

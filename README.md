@@ -11,7 +11,7 @@
 - Create a virtual environment
 - Install the required modules
 - Install postgresql
--
+- Execute the django makemigrations and migrate commands for binance_app app
 - Execute these commands:<p>
   `$ python manage.py migrate`<p>
   `$ python manage.py createsuperuser`<p>
