@@ -10,7 +10,7 @@ def main(param={'trading pair': None}):
                             'symbol': {'trading pair symbol': '', 'price': 0},
                             'serverTime': 0})
 
-    if (param['trading pair'] is None):
+    if (param['trading pair'] is None or param['trading pair'] != 'GXSUSDT'):
         param['trading pair'] = "BNBUSDT"
     retorno['retorno']['symbol']['trading pair symbol'] = param['trading pair']
 
