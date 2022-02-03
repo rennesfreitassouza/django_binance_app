@@ -41,7 +41,5 @@ def logging_v_ip(request):
 
 
 def home(request):
-    #
-    t_scheduler.t3()
     #GXStoUSDT = GXStoUSDT.objects
     return render(request, 't_b_app/home.html')  # , {'GXStoUSDT': GXStoUSDT})
