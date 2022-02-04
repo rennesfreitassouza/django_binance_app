@@ -1,9 +1,11 @@
 # Django Binance App
 
+[Link to an website example on EC2](http://ec2-3-133-79-232.us-east-2.compute.amazonaws.com)
+
 ## Prerequisites
 
 - [Your own Binance API](https://www.binance.com/en/support/faq/360002502072)
-- Modules 'Django' 'django-allauth', 'django-environ', 'django-filter', 'django-rest-framework', 'djangorestframework', 'binance-connector', 'psycopg2-binary'
+- Modules <code>Django django-allauth django-environ django-filter django-rest-framework djangorestframework binance-connector psycopg2-binary django-extensions</code>
 
 ## How to run the django app
 
