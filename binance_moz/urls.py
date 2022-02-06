@@ -8,7 +8,7 @@ import binance_app.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', binance_app.views.home, name='index'),
+    path('', binance_app.views.home, name='home'),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('binance_app/', include('binance_app.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

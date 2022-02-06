@@ -41,10 +41,10 @@
         <img src="{% static 'binance.png' %}" height="50"></img>  
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2"">
-            <a
-              href="{% url 'execute_new_req' %}"
-              class="btn btn-sm btn-outline-secondary"
-              >new HTTP get request</a>
+              <form action="{% url 'execute_new_req' %}" method="get" id="id_for_test">
+                {% csrf_token %}
+                <input name="submit" type="submit" value="New HTTP GET request" />
+              </form>
           </div>
         </div>
     </div>
@@ -57,14 +57,16 @@
               <th scope="col">trading_pair</th>
               <th scope="col">avg_price</th>
               <th scope="col">timestamp</th>
+              <th scope="col">hash</th>
             </tr>
           </thead>
           <tbody>
-            {% for gxsTousdt in gxs_to_usdt %}
+            {% for trading_pair in trading_pair %}
             <tr>
-              <td>{{ gxsTousdt.trading_pair_symbol }}</td>
-              <td>{{ gxsTousdt.symbol_avg_price }}</td>
-              <td>{{ gxsTousdt.api_dt }}</td>
+              <td>{{ trading_pair.trading_pair_symbol }}</td>
+              <td>{{ trading_pair.symbol_avg_price }}</td>
+              <td>{{ trading_pair.api_dt }}</td>
+              <td>{{trading_pair.tradingpairhash}} </td>
             </tr>
             {% endfor %}
           </tbody>

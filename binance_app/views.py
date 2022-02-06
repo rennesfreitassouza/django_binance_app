@@ -1,10 +1,11 @@
+import hashlib
 from binance_app import main
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from binance_app.src.log import Log
 from datetime import datetime
-from django.shortcuts import render
-from binance_app.models import GXStoUSDT
+from django.shortcuts import render, redirect
+from binance_app.models import TradingPair
 
 
 @api_view(('GET',))
@@ -24,7 +25,7 @@ def exe(request):
 def execute_new_req(request):
     logging_v_ip(request)
     main.main()
-    return home(request)
+    return redirect('home')
 
 
 def logging_v_ip(request):
@@ -46,5 +47,6 @@ def logging_v_ip(request):
 
 
 def home(request):
-    gxs_to_usdt = GXStoUSDT.objects.all().order_by('-api_dt')
-    return render(request, 't_b_app/home.html', {'gxs_to_usdt': gxs_to_usdt})
+    # https://docs.djangoproject.com/en/4.0/topics/db/queries/#limiting-querysets
+    trading_pair = TradingPair.objects.all().order_by('-api_dt')[:5]
+    return render(request, 't_b_app/home.html', {'trading_pair': trading_pair})

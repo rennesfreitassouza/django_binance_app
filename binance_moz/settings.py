@@ -89,6 +89,7 @@ DATABASES = {
         'PASSWORD': env.str('DB_PASS'),
         'HOST': env.str('DB_HOST'),
         'PORT': env.str('DB_PORT'),
+        'TEST_NAME': os.path.join(BASE_DIR, 'test_' + env.str('DB_NAME'))
     }
 }
 
