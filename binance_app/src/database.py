@@ -1,8 +1,8 @@
-from django.forms import ValidationError
 from django.utils.timezone import make_aware
 from django.conf import settings
 from pytz import timezone
 from binance_app.models import TradingPair, TradingPairHash
+from django.db.utils import IntegrityError
 from datetime import datetime
 import base64
 import hashlib
@@ -35,7 +35,7 @@ def save_trading_pair_hash(tp_row):
 
     try:
         tp_hash_row.save()
-    except ValidationError as e:
+    except IntegrityError as e:
         tp_row.update(
             error=f'{tp_row.error};  new_error: {e} hash: {tp_row_hash}')
 
@@ -51,9 +51,6 @@ def convert_to_datetime(server_timestamp):
 def hash_data(m1: str):
     m1_encoded = m1.encode('utf-8')
     m1_encoded_hex = hashlib.md5(m1_encoded).hexdigest()
-
-    print(m1_encoded_hex, type(m1_encoded_hex))
-
     m1_encoded_hex_b64 = base_64(m1_encoded_hex)
     return m1_encoded_hex_b64
 

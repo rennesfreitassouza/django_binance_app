@@ -1,6 +1,7 @@
 # Django Binance App
 
-[Link to an website example on EC2](http://ec2-3-133-79-232.us-east-2.compute.amazonaws.com)
+[Link to an website example on EC2](ec2-3-133-79-232.us-east-2.compute.amazonaws.com)
+[RESTful Web API endpoint](ec2-3-133-79-232.us-east-2.compute.amazonaws.com/binance_app/exec_request)
 
 ## Prerequisites
 
@@ -17,6 +18,7 @@
 - Execute these commands:<p>
   `$ python manage.py migrate`<p>
   `$ python manage.py createsuperuser`<p>
+  `$ python manage.py collectstatic`<p>
   `$ python manage.py runserver`<p>
   `Execute a HTTP GET request:`<p>
 
