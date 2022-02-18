@@ -3,7 +3,7 @@
 ## Prerequisites
 
 - [Your own Binance API](https://www.binance.com/en/support/faq/360002502072)
-- Modules 'Django' 'django-allauth', 'django-environ', 'django-filter', 'django-rest-framework', 'binance-connector'
+- Modules 'Django' 'django-allauth', 'django-environ', 'django-filter', 'djangorestframework', 'binance-connector'
 
 ## How to run the django app
 
